@@ -1,5 +1,6 @@
 # A Boilerplate for Meteor 1.2 using Bootstrap, Blaze, and Flow Router
 The purpose of the repo is to provide a boilerplate for using Meteor with Bootstrap and Flow Router. The README below will show anyone how to add HTML content, create pages, create links, and adding images.
+
 ## Working with this Repo
 1. Install Meteor. https://www.meteor.com/install
 2. Then run the following commands in your terminal.
@@ -9,6 +10,7 @@ The purpose of the repo is to provide a boilerplate for using Meteor with Bootst
     meteor
     ```
 Once Meteor is up and running, go to `localhost:3000`, and you should see your app. When you make changes to the HTML, JavaScript, or CSS, Meteor will detect the change and automatically refresh the page.
+
 ## HTML Contents
 For the front-end, the app is using blaze. Blaze's templating system is known as SpaceBars. In order to add content to a page, you simply modify the HTML between the template tags.
 ```
@@ -17,8 +19,10 @@ For the front-end, the app is using blaze. Blaze's templating system is known as
 </template>
  ```
 There is no need to link the Bootstrap stylesheet. The stylesheet is automatically loaded onto the client through the Meteor build system. If you need add additional styles, there is a folder on the client called `styles`. You can include custom stylesheets in that folder. Once again, there is no need to link these stylesheets. The stylesheets are automatically loaded by the Meteor build system.
+
 ## Creating New Page
 This section is purely a matter of preference on my part. For each page, you can follow the following pattern.
+
 ### Folder Structure
 ```
 |--client
@@ -48,10 +52,12 @@ FlowRouter.route('/my-page', { //**this is the route the user will see in the UR
 });
 ```
 Note I made comments above. For the most part, you will only find yourself changing the lines with `**` in the comments.
+
 ## Creating Links
 Unlike a typical Bootstrap project, we can use the router file to help us link between pages. If I want to create a link to the myPage page that I created above, here is the code.
 `<a href="{{pathFor 'myPage'}}">Link</a>`
 Note that myPage is the same name in the link that I defined in the router file. This prevents you from having to worry about where a particular file is with respect to the other file. `{{pathFor 'myPage'}}` will work in any HTML template.
+
 ## Adding Images
 Images can be stored under the public directory. I created a folder called img to store them in. This folder can have sub-directories if necessary. So let's see what adding an image looks like.
 ```
