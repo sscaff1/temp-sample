@@ -1,0 +1,36 @@
+<template name="viewReadings">
+  <div class="container">
+    <table class="table table-striped">
+      <tr>
+        <th>Submitted</th>
+        <th>Date</th>
+        <th>Event Name</th>
+        <th>Benzene (ppm)</th>
+        <th>CO (ppm)</th>
+        <th>H<sub>2</sub>S (ppm)</th>
+        <th>LEL (%)</th>
+        <th>O<sub>2</sub> (%)</th>
+        <th>SO<sub>2</sub> (ppm)</th>
+        <th>VOC (ppm)</th>
+        <th>Oder</th>
+        <th>Wind</th>
+      </tr>
+      {{#each reading in readings}}
+        <tr>
+          <td>{{reading.submittedBy}}</td>
+          <td>{{niceDate reading.readingTime}}</td>
+          <td>{{reading.eventName}}</td>
+          <td>{{reading.benzene}}</td>
+          <td>{{reading.co}}</td>
+          <td>{{reading.h2s}}</td>
+          <td>{{reading.lel}}</td>
+          <td>{{reading.o2}}</td>
+          <td>{{reading.so2}}</td>
+          <td>{{reading.voc}}</td>
+          <td>{{reading.oder}}</td>
+          <td>{{reading.windSpeed}} ({{shortWind reading.windDirection}})</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</template>

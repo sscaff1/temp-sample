@@ -22,3 +22,8 @@ kadira:flow-router
 kadira:blaze-layout
 arillo:flow-router-helpers
 twbs:bootstrap
+accounts-password
+ian:accounts-ui-bootstrap-3
+fortawesome:fontawesome
+momentjs:moment
+tsega:bootstrap3-datetimepicker

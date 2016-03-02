@@ -1,0 +1,127 @@
+<template name="addReadings">
+  <div class="container">
+    <form>
+      <div class="row">
+        <h3>Add a New Reading</h3>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="readingTime" class="control-label">Reading Date/Time</label>
+            <input type="text" class="form-control datetimepicker" name="readingTime" value="{{currentDate}}" />
+          </div>
+          <div class="form-group">
+            <label for="submittedBy" class="control-label">Submitted By</label>
+            <input type="text" class="form-control" name="submittedBy" value="{{currentUser.profile.name}}" />
+          </div>
+          <div class="form-group">
+            <label for="eventName" class="control-label">Event Name</label>
+            <input type="text" class="form-control" name="eventName" />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="windDirection" class="control-label">Wind Direction</label>
+            <select class="form-control" name="windDirection">
+              <option value="">--</option>
+              <option value="N 0°">N 0°</option>
+              <option value="NNE 22.5°">NNE 22.5°</option>
+              <option value="NE 45°">NE 45°</option>
+              <option value="ENE 67.5°">ENE 67.5°</option>
+              <option value="E 90°">E 90°</option>
+              <option value="ESE 112.5°">ESE 112.5°</option>
+              <option value="SE 135°">SE 135°</option>
+              <option value="SSE 157.5°">SSE 157.5°</option>
+              <option value="S 180°">S 180°</option>
+              <option value="SSW 202.5°">SSW 202.5°</option>
+              <option value="SW 225°">SW 225°</option>
+              <option value="WSW 247.5°">WSW 247.5°</option>
+              <option value="W 270°">W 270°</option>
+              <option value="WNW 292.5°">WNW 292.5°</option>
+              <option value="NW 315°">NW 315°</option>
+              <option value="NNW 337.5°">NNW 337.5°</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="windSpeed" class="control-label">Wind Speed</label>
+            <input type="text" class="form-control" name="windSpeed" />
+          </div>
+          <div class="form-group">
+            <label for="Location" class="control-label">Location</label>
+            <select class="form-control" name="location">
+              <option value="">--</option>
+              <option value="Location 1">Location 1</option>
+              <option value="Location 2">Location 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h4>Reading</h4>
+          <p>A "0" implies a reading that was Below the Detectable Limit (BDL) of the instrument used. A blank indicates a measurement was not taken.</p>
+          <p>If respiratory protection is required, do not remove your respirator to test for odor. Simply skip the test for odor.</p>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="benzene" class="control-label small-font">Benzene (ppm)</label>
+            <input type="text" class="form-control" name="benzene" />
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label for="co" class="control-label small-font">CO (ppm)</label>
+            <input type="text" class="form-control" name="co" />
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label for="h2s" class="control-label small-font">H<sub>2</sub>S (ppm)</label>
+            <input type="text" class="form-control" name="h2s" />
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label for="lel" class="control-label small-font">LEL (%)</label>
+            <input type="text" class="form-control" name="lel" />
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label for="o2" class="control-label small-font">O<sub>2</sub> (%)</label>
+            <input type="text" class="form-control" name="o2" />
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label for="so2" class="control-label small-font">SO<sub>2</sub> (ppm)</label>
+            <input type="text" class="form-control" name="so2" />
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="voc" class="control-label small-font">VOC (ppm)</label>
+            <input type="text" class="form-control" name="voc" />
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label for="oder" class="control-label small-font">Oder</label>
+            <select class="form-control" name="oder">
+              <option value="">--</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="other" class="control-label small-font">Other</label>
+            <input type="text" class="form-control" name="other" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
+  </div>
+</template>

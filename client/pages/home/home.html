@@ -1,9 +1,16 @@
 <template name="home">
-  <div class="container">
-    <h2 class="text-center">
-      This is the home page.<br/>
-      <a href="{{pathFor 'about-us'}}">Click here to go to the about us page</a>
-    </h2>
-    <img src="/img/balls.jpg" class="center-block img-responsive" />
+  <div class="container text-center">
+    {{#if currentUser}}
+      <a class="btn btn-lg btn-success" href={{pathFor 'viewReadings'}}>
+        <i class="fa fa-eye fa-2x text-center"></i><br/>
+        View Readings
+      </a>
+      <a class="btn btn-lg btn-success" href={{pathFor 'addReadings'}}>
+        <i class="fa fa-pencil-square-o fa-2x text-center"></i><br/>
+        Add New Reading
+      </a>
+    {{else}}
+      {{> loginForm}}
+    {{/if}}
   </div>
 </template>
